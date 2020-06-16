@@ -13,6 +13,13 @@
 		0A26A4A0249731DB0045A40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26A49E249731DB0045A40C /* Main.storyboard */; };
 		0A26A4A2249731DD0045A40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A26A4A1249731DD0045A40C /* Assets.xcassets */; };
 		0A26A4A5249731DD0045A40C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26A4A3249731DD0045A40C /* LaunchScreen.storyboard */; };
+		0A26A4AD249732AB0045A40C /* MKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26A4AC249732AB0045A40C /* MKPointAnnotation.swift */; };
+		0A82F96C24982445005F7753 /* EndPointProtocole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82F96B24982445005F7753 /* EndPointProtocole.swift */; };
+		0A82F96E24982511005F7753 /* UdacityEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82F96D24982511005F7753 /* UdacityEndPoint.swift */; };
+		0A82F970249827CC005F7753 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82F96F249827CC005F7753 /* APIClient.swift */; };
+		0A82F972249828B5005F7753 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82F971249828B5005F7753 /* NetworkEngine.swift */; };
+		0A89379D24983FA400A90144 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89379C24983FA400A90144 /* Response.swift */; };
+		0A89379F24986CD700A90144 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89379E24986CD700A90144 /* Request.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +31,13 @@
 		0A26A4A1249731DD0045A40C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A26A4A4249731DD0045A40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A26A4A6249731DD0045A40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A26A4AC249732AB0045A40C /* MKPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKPointAnnotation.swift; sourceTree = "<group>"; };
+		0A82F96B24982445005F7753 /* EndPointProtocole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocole.swift; sourceTree = "<group>"; };
+		0A82F96D24982511005F7753 /* UdacityEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityEndPoint.swift; sourceTree = "<group>"; };
+		0A82F96F249827CC005F7753 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		0A82F971249828B5005F7753 /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
+		0A89379C24983FA400A90144 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0A89379E24986CD700A90144 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +71,54 @@
 			isa = PBXGroup;
 			children = (
 				0A26A498249731DB0045A40C /* AppDelegate.swift */,
-				0A26A49A249731DB0045A40C /* SceneDelegate.swift */,
 				0A26A49C249731DB0045A40C /* ViewController.swift */,
+				0A89379B24983F7000A90144 /* networkLayer */,
+				0A82F968249820B8005F7753 /* Models */,
+				0A26A49A249731DB0045A40C /* SceneDelegate.swift */,
+				0A26A4AC249732AB0045A40C /* MKPointAnnotation.swift */,
 				0A26A49E249731DB0045A40C /* Main.storyboard */,
 				0A26A4A1249731DD0045A40C /* Assets.xcassets */,
 				0A26A4A3249731DD0045A40C /* LaunchScreen.storyboard */,
 				0A26A4A6249731DD0045A40C /* Info.plist */,
 			);
 			path = "On the Map";
+			sourceTree = "<group>";
+		};
+		0A82F966249820A2005F7753 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				0A89379E24986CD700A90144 /* Request.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		0A82F967249820AE005F7753 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				0A89379C24983FA400A90144 /* Response.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		0A82F968249820B8005F7753 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A82F966249820A2005F7753 /* Request */,
+				0A82F967249820AE005F7753 /* Response */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A89379B24983F7000A90144 /* networkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0A82F96F249827CC005F7753 /* APIClient.swift */,
+				0A82F971249828B5005F7753 /* NetworkEngine.swift */,
+				0A82F96B24982445005F7753 /* EndPointProtocole.swift */,
+				0A82F96D24982511005F7753 /* UdacityEndPoint.swift */,
+			);
+			name = networkLayer;
+			path = Models/networkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A82F96C24982445005F7753 /* EndPointProtocole.swift in Sources */,
 				0A26A49D249731DB0045A40C /* ViewController.swift in Sources */,
+				0A82F970249827CC005F7753 /* APIClient.swift in Sources */,
 				0A26A499249731DB0045A40C /* AppDelegate.swift in Sources */,
+				0A89379D24983FA400A90144 /* Response.swift in Sources */,
+				0A26A4AD249732AB0045A40C /* MKPointAnnotation.swift in Sources */,
+				0A82F96E24982511005F7753 /* UdacityEndPoint.swift in Sources */,
+				0A89379F24986CD700A90144 /* Request.swift in Sources */,
+				0A82F972249828B5005F7753 /* NetworkEngine.swift in Sources */,
 				0A26A49B249731DB0045A40C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
