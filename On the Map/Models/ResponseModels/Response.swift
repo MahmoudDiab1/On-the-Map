@@ -8,26 +8,25 @@
 
 import Foundation
 
-      struct account: Decodable {
+      struct Account: Decodable {
           var registered: Bool
           var key: String
       }
       
-      struct session:  Decodable {
+      struct Session: Codable {
           var id: String
           var expiration: String
       }
 
 
    struct Auth:  Decodable {
-          var account: account
-          var session: session
+          var account: Account
+          var session: Session
       }
       
 //;;;;;;;;;;;;
 
- 
-   
+
 
 struct UserInformation : Codable {
     let first_name : String

@@ -8,10 +8,11 @@
 
 import Foundation
 
+//MARK:- Protocol Responsbility: Encapsulate the components of url and implemented as highlevel by different endpoints.
 protocol  EndPoint { 
     var scheme:String{get}
     var path:String{get}
     var host:String{get}
-    var method:String{get} 
-}
-  
+    var method:String{get}
+    var query : [URLQueryItem]{get}
+} 

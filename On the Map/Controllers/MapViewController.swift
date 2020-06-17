@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
  
-class ViewController: UIViewController , MKMapViewDelegate{
+class MapViewController: UIViewController , MKMapViewDelegate{
     
     var locationManager = CLLocationManager()
     @IBOutlet weak var mapKitOutlet: MKMapView!
@@ -18,22 +18,27 @@ class ViewController: UIViewController , MKMapViewDelegate{
         super.viewDidLoad()
         let userName = "diab85377@gmail.com"
         let password = "Mahmoudios95"
-        
-         
-        APIClient.getUserDataRequest(userName: userName, password: password) { (result:Result<UserInformation?, Error>) in
+
+
+       UserClient.getUserDataRequest(userName: userName, password: password) { (result:Result<UserInformation?, Error>) in
             switch result
             {
             case .success(let data):
-           
+
                 guard let userData = data else {return}
-//                print(userData)
+              print(userData)
             case .failed(let error):
-                print("error")
+                print(error)
             }
         }
-    }
+
+
+        UserClient.delete  ()
+     
+        }
     
-    
-    
+ 
+        
+     
     
 }
