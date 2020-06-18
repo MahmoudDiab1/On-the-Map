@@ -7,8 +7,8 @@
 //
 
 import Foundation
-  
- //MARK:- Enum responsbility: Encapsulate urlComponents for different sources in separate way (scheme-host-path-queryItems-method).
+
+//MARK:- Enum responsbility: Encapsulate urlComponents for different sources in separate way (scheme-host-path-queryItems-method).
 
 enum udacityEndPoint :EndPoint {
     case getSessionId
@@ -56,26 +56,23 @@ extension udacityEndPoint {
             return "DELETE"
         case .getUserInfo, .getStudentLocations :
             return "GET"
-       
+            
         }
     }
     
     
     var query : [URLQueryItem] {
         switch self {
- 
+            
         case .getStudentLocations:
             return [URLQueryItem(name: "order", value: "-updatedAt"),
                     URLQueryItem(name: "limit", value: "100")
-                   ]
+            ]
         case .getSessionId, .deleteSessionId, .getUserInfo, .postLocation :
             return []
         }
     }
     
-    
-    
-    
 }
 
- 
+

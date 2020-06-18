@@ -1,5 +1,5 @@
 //
-//  File.swift
+//NetworkEngine.swift
 //  On the Map
 //
 //  Created by mahmoud diab on 6/16/20.
@@ -7,8 +7,8 @@
 //
 
 import Foundation
- 
-//MARK:- Enum responsbility: Encapsulate Generic types.
+
+//MARK:- Enum responsbility: Encapsulate Generic types used for network calls.
 enum Result <T,U> where U:Error {
     case success(T)
     case failed(U)
@@ -17,8 +17,7 @@ enum Result <T,U> where U:Error {
 //MARK:- Class Responsbility: Encapsulate Generic functions like post - fetch used by other functions in network layer.
 class NetworkEngine {
     
-    //    Generic post request
-    
+    //MARK:-    Generic post request
     class func post< ResponseModel:Decodable, RequestType:Encodable>(with endPoint:EndPoint, body:RequestType, completion : @escaping(Result<ResponseModel?,Error>) -> Void) {
         
         var components = URLComponents()
@@ -26,16 +25,18 @@ class NetworkEngine {
         components.host = endPoint.host
         components.path = endPoint.path
         guard let urlString = components.url  else {return}
+        
         var urlRequest = URLRequest(url: urlString)
+        
         do {
             urlRequest.httpBody = try JSONEncoder().encode(body)
         } catch let error {
-            print(error.localizedDescription)
+            completion(.failed(error))
         }
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         urlRequest.httpMethod = endPoint.method
-        print(urlRequest)
+        // print("____urlRequest \(urlRequest)")
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
             guard var data = data else {
@@ -50,9 +51,8 @@ class NetworkEngine {
                 let dataObject = try JSONDecoder().decode(ResponseModel.self, from: data)
                 DispatchQueue.main.async {
                     completion(.success(dataObject))
-                    print("_________dataObject\(dataObject)")
+                    // print("__dataObject\(dataObject)")
                 }
-                
             } catch {
                 DispatchQueue.main.async {
                     completion(.failed(error))
@@ -63,8 +63,8 @@ class NetworkEngine {
     }
     
     
-    //    Generic get Request
-    class func fetch< ResponseModel:Decodable>(with endPoint:EndPoint, completion : @escaping(Result<ResponseModel,Error>) -> Void) {
+    //MARK:-  Generic get Request
+    class func fetch< ResponseModel:Decodable>(with endPoint:EndPoint, completion : @escaping(Result<ResponseModel?,Error>) -> Void) {
         
         var components = URLComponents()
         components.scheme = endPoint.scheme
@@ -74,7 +74,7 @@ class NetworkEngine {
         guard let urlString = components.url  else {return}
         var urlRequest = URLRequest(url: urlString)
         urlRequest.httpMethod = endPoint.method
-        print("____urlRequest \(urlRequest)")
+        // print("____urlRequest \(urlRequest)")
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
             guard var data = data else {

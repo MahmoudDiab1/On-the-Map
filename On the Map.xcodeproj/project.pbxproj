@@ -13,19 +13,21 @@
 		0A26A4A0249731DB0045A40C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26A49E249731DB0045A40C /* Main.storyboard */; };
 		0A26A4A2249731DD0045A40C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A26A4A1249731DD0045A40C /* Assets.xcassets */; };
 		0A26A4A5249731DD0045A40C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A26A4A3249731DD0045A40C /* LaunchScreen.storyboard */; };
-		0A26A4AD249732AB0045A40C /* MKPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A26A4AC249732AB0045A40C /* MKPointAnnotation.swift */; };
 		0A82F96C24982445005F7753 /* EndPointProtocole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82F96B24982445005F7753 /* EndPointProtocole.swift */; };
 		0A82F96E24982511005F7753 /* UdacityEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82F96D24982511005F7753 /* UdacityEndPoint.swift */; };
 		0A82F970249827CC005F7753 /*  UserClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82F96F249827CC005F7753 /*  UserClient.swift */; };
 		0A82F972249828B5005F7753 /* NetworkEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A82F971249828B5005F7753 /* NetworkEngine.swift */; };
-		0A8937A3249987E700A90144 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937A2249987E700A90144 /* Account.swift */; };
-		0A8937A5249987F100A90144 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937A4249987F100A90144 /* Request.swift */; };
-		0A8937A72499880A00A90144 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937A62499880A00A90144 /* Response.swift */; };
-		0A8937A92499923000A90144 /* UserLocationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937A82499923000A90144 /* UserLocationModel.swift */; };
+		0A8937A5249987F100A90144 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937A4249987F100A90144 /* UserData.swift */; };
+		0A8937A72499880A00A90144 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937A62499880A00A90144 /* Account.swift */; };
+		0A8937A92499923000A90144 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937A82499923000A90144 /* Locations.swift */; };
 		0A8937AB2499928A00A90144 /* LocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937AA2499928A00A90144 /* LocationClient.swift */; };
 		0A8937B02499D9C000A90144 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937AF2499D9C000A90144 /* ListViewController.swift */; };
 		0A8937B22499DA3600A90144 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937B12499DA3600A90144 /* ListTableViewCell.swift */; };
 		0A8937B42499DA9100A90144 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937B32499DA9100A90144 /* LoginViewController.swift */; };
+		0A8937BA249ADE8C00A90144 /* mainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937B9249ADE8C00A90144 /* mainTabBar.swift */; };
+		0A8937BC249B303800A90144 /* AddLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937BB249B303800A90144 /* AddLocation.swift */; };
+		0A8937BE249B307600A90144 /* ShareLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937BD249B307600A90144 /* ShareLocation.swift */; };
+		0A8937C0249B698000A90144 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8937BF249B698000A90144 /* NavController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,19 +39,21 @@
 		0A26A4A1249731DD0045A40C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A26A4A4249731DD0045A40C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A26A4A6249731DD0045A40C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0A26A4AC249732AB0045A40C /* MKPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKPointAnnotation.swift; sourceTree = "<group>"; };
 		0A82F96B24982445005F7753 /* EndPointProtocole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointProtocole.swift; sourceTree = "<group>"; };
 		0A82F96D24982511005F7753 /* UdacityEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityEndPoint.swift; sourceTree = "<group>"; };
 		0A82F96F249827CC005F7753 /*  UserClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " UserClient.swift"; sourceTree = "<group>"; };
 		0A82F971249828B5005F7753 /* NetworkEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEngine.swift; sourceTree = "<group>"; };
-		0A8937A2249987E700A90144 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = "On the Map/Models/RequestModels/Account.swift"; sourceTree = SOURCE_ROOT; };
-		0A8937A4249987F100A90144 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Request.swift; path = "On the Map/Models/RequestModels/Request.swift"; sourceTree = SOURCE_ROOT; };
-		0A8937A62499880A00A90144 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Response.swift; path = "On the Map/Models/ResponseModels/Response.swift"; sourceTree = SOURCE_ROOT; };
-		0A8937A82499923000A90144 /* UserLocationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserLocationModel.swift; path = "On the Map/Models/Response/UserLocationModel.swift"; sourceTree = SOURCE_ROOT; };
+		0A8937A4249987F100A90144 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserData.swift; path = "On the Map/Models/RequestModels/UserData.swift"; sourceTree = SOURCE_ROOT; };
+		0A8937A62499880A00A90144 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Account.swift; path = "On the Map/Models/ResponseModels/Account.swift"; sourceTree = SOURCE_ROOT; };
+		0A8937A82499923000A90144 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Locations.swift; path = "On the Map/Models/Response/Locations.swift"; sourceTree = SOURCE_ROOT; };
 		0A8937AA2499928A00A90144 /* LocationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LocationClient.swift; path = "On the Map/Models/NetworkLayer/LocationClient.swift"; sourceTree = SOURCE_ROOT; };
 		0A8937AF2499D9C000A90144 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		0A8937B12499DA3600A90144 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		0A8937B32499DA9100A90144 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0A8937B9249ADE8C00A90144 /* mainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainTabBar.swift; sourceTree = "<group>"; };
+		0A8937BB249B303800A90144 /* AddLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocation.swift; sourceTree = "<group>"; };
+		0A8937BD249B307600A90144 /* ShareLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLocation.swift; sourceTree = "<group>"; };
+		0A8937BF249B698000A90144 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,7 @@
 		0A82F966249820A2005F7753 /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				0A8937A2249987E700A90144 /* Account.swift */,
-				0A8937A4249987F100A90144 /* Request.swift */,
+				0A8937A4249987F100A90144 /* UserData.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -103,8 +106,8 @@
 		0A82F967249820AE005F7753 /* Response */ = {
 			isa = PBXGroup;
 			children = (
-				0A8937A62499880A00A90144 /* Response.swift */,
-				0A8937A82499923000A90144 /* UserLocationModel.swift */,
+				0A8937A62499880A00A90144 /* Account.swift */,
+				0A8937A82499923000A90144 /* Locations.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -122,11 +125,11 @@
 		0A89379B24983F7000A90144 /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				0A82F96F249827CC005F7753 /*  UserClient.swift */,
-				0A8937AA2499928A00A90144 /* LocationClient.swift */,
-				0A82F971249828B5005F7753 /* NetworkEngine.swift */,
 				0A82F96B24982445005F7753 /* EndPointProtocole.swift */,
 				0A82F96D24982511005F7753 /* UdacityEndPoint.swift */,
+				0A82F971249828B5005F7753 /* NetworkEngine.swift */,
+				0A82F96F249827CC005F7753 /*  UserClient.swift */,
+				0A8937AA2499928A00A90144 /* LocationClient.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -134,11 +137,14 @@
 		0A8937AC2499B78300A90144 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0A8937B32499DA9100A90144 /* LoginViewController.swift */,
 				0A26A49C249731DB0045A40C /* MapViewController.swift */,
-				0A26A4AC249732AB0045A40C /* MKPointAnnotation.swift */,
 				0A8937AF2499D9C000A90144 /* ListViewController.swift */,
 				0A8937B12499DA3600A90144 /* ListTableViewCell.swift */,
-				0A8937B32499DA9100A90144 /* LoginViewController.swift */,
+				0A8937BB249B303800A90144 /* AddLocation.swift */,
+				0A8937BD249B307600A90144 /* ShareLocation.swift */,
+				0A8937BF249B698000A90144 /* NavController.swift */,
+				0A8937B9249ADE8C00A90144 /* mainTabBar.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -234,20 +240,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A82F96C24982445005F7753 /* EndPointProtocole.swift in Sources */,
-				0A8937A5249987F100A90144 /* Request.swift in Sources */,
+				0A8937A5249987F100A90144 /* UserData.swift in Sources */,
+				0A8937BA249ADE8C00A90144 /* mainTabBar.swift in Sources */,
 				0A26A49D249731DB0045A40C /* MapViewController.swift in Sources */,
 				0A8937AB2499928A00A90144 /* LocationClient.swift in Sources */,
 				0A82F970249827CC005F7753 /*  UserClient.swift in Sources */,
 				0A26A499249731DB0045A40C /* AppDelegate.swift in Sources */,
+				0A8937BE249B307600A90144 /* ShareLocation.swift in Sources */,
 				0A8937B02499D9C000A90144 /* ListViewController.swift in Sources */,
-				0A8937A72499880A00A90144 /* Response.swift in Sources */,
-				0A8937A3249987E700A90144 /* Account.swift in Sources */,
-				0A8937A92499923000A90144 /* UserLocationModel.swift in Sources */,
-				0A26A4AD249732AB0045A40C /* MKPointAnnotation.swift in Sources */,
+				0A8937A72499880A00A90144 /* Account.swift in Sources */,
+				0A8937A92499923000A90144 /* Locations.swift in Sources */,
 				0A82F96E24982511005F7753 /* UdacityEndPoint.swift in Sources */,
 				0A8937B42499DA9100A90144 /* LoginViewController.swift in Sources */,
 				0A82F972249828B5005F7753 /* NetworkEngine.swift in Sources */,
+				0A8937C0249B698000A90144 /* NavController.swift in Sources */,
 				0A26A49B249731DB0045A40C /* SceneDelegate.swift in Sources */,
+				0A8937BC249B303800A90144 /* AddLocation.swift in Sources */,
 				0A8937B22499DA3600A90144 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

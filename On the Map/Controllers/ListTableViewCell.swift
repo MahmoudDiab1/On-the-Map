@@ -9,20 +9,15 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
-
-   
-        
-        @IBOutlet weak var cellImage: UIImageView!
-        @IBOutlet weak var cellNameLabel: UILabel!
-        @IBOutlet weak var cellURLLabel: UILabel!
-        
-        
-        
-        func setCellInfo(studentName: String, studentURL: String) {
-            
-            cellImage.image = UIImage(named: "pngwave")!
-            cellNameLabel.text = studentName
-            cellURLLabel.text = studentURL
-        }
+    // MARK:- outlets
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellNameLabel: UILabel!
+    @IBOutlet weak var mediaUrl: UILabel!
+    
+    // Configure Cell.
+    func setCellInfo(studentName: String , mediaUrl:String){
+        self.cellNameLabel.text = studentName
+        self.mediaUrl.text = mediaUrl
+    }
     
 }

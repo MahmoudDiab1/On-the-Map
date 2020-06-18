@@ -12,16 +12,20 @@ import Foundation
 
 class LocationClient {
     
-    class func getLocationsOrdered(completion: @escaping(Result<[Location],Error>)->()) {
-        NetworkEngine.fetch(with: udacityEndPoint.getStudentLocations) { (locations:Result<[Location], Error>) in
-            DispatchQueue.main.async {
-                   completion(locations) 
-            }
+    class func getLocationsOrdere(completion: @escaping(Result<Locations?,Error>)->()) {
+        NetworkEngine.fetch(with: udacityEndPoint.getStudentLocations) { (locations:Result<Locations?, Error>) in
+            completion(locations)
         }
     }
     
-    class func postUserLocation(userLocationData: Location,completion: @escaping(Result<LocationResponse?,Error>)->()) {
+    class func postUserLocation(userLocationData: StudentInformation ,completion: @escaping(Result<LocationResponse?,Error>)->()) {
         NetworkEngine.post(with: udacityEndPoint.postLocation, body: userLocationData) { (result:Result<LocationResponse?, Error>) in
+            completion(result)
+        }
+    }
+    
+    class func reload(completion: @escaping(Result<Locations?,Error>)->())  {
+        getLocationsOrdere { (result:Result<Locations?, Error>) in
             completion(result)
         }
     }
